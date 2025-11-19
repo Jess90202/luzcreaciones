@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de administración</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><h1>Administración de productos</h1></header>
+<div id="login-section">
+    <button id="btnLogin">Iniciar sesión con Google</button>
+</div>
+<div id="admin-section" style="display:none;">
+    <h2>Agregar producto</h2>
+    <form id="formProducto">
+        <label>Imagen: <input type="file" id="imagen" accept="image/*" required></label>
+        <label>Nombre: <input type="text" id="nombre" required></label>
+        <label>Precio: <input type="number" id="precio" required></label>
+        <label>Descripción: <textarea id="descripcion"></textarea></label>
+        <label>Categoría:
+            <select id="categoria">
+                <option value="bisuteria">Bisutería</option>
+                <option value="madera">Madera</option>
+            </select>
+        </label>
+        <button type="submit">Guardar producto</button>
+    </form>
+    <h2>Productos existentes</h2>
+    <div id="listaProductos"></div>
+</div>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+<script src="app.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
