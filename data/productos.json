@@ -1,12 +1,3 @@
 {
-  "productos": [
-    {
-      "id": 1763604002786,
-      "nombre": "Tipo de cambio",
-      "precio": 21,
-      "descripcion": "Divino tipo de cambio",
-      "categoria": "bisuteria",
-      "imagen": "images/1763604001619_Imagen_de_WhatsApp_2025-07-01_a_las_19.23.14_62503e3c.jpg"
-    }
-  ]
+  "productos": []
 }
