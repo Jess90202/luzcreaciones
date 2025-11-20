@@ -6,7 +6,7 @@ const PRODUCTOS_PATH = "data/productos.json";
 
 // Config Cloudinary
 const CLOUD_NAME = "dexcfzwlm";
-const UPLOAD_PRESET = "ml_default";
+const UPLOAD_PRESET = "luzcreaciones_unsigned";
 
 let githubToken = null;
 let productos = [];
