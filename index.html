@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luz Creaciones | Catálogo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="logo.png" alt="Luz Creaciones" class="logo" />
+        <div class="brand-text">
+          <h1>Luz Creaciones</h1>
+          <p>Bisutería y decoración en madera</p>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <a href="#inicio" id="navInicio" class="active">Inicio</a>
+        <a href="#contacto" id="navContacto">Contacto</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+    <div class="header-inner">
+      <div class="filters">
+        <div class="filter-group">
+          <label for="categoriaSelect">Categoría</label>
+          <select id="categoriaSelect">
+            <option value="todas">Todas</option>
+            <option value="bisuteria">Bisutería</option>
+            <option value="madera">Madera</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="buscador">Buscar</label>
+          <input
+            type="search"
+            id="buscador"
+            placeholder="Collar, aretes, figura..."
+          />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio" class="main-content">
+    <section id="productos" class="grid-productos">
+      <!-- Tarjetas generadas por JS -->
+    </section>
+    <p id="sinResultados" class="no-results" style="display:none;">
+      No encontramos productos con esos criterios. Prueba otra palabra o categoría.
+    </p>
+
+    <!-- Sección de contacto: inicia oculta -->
+    <section id="contacto" class="contact-section" style="display:none;">
+      <div class="contact-card">
+        <h2>Contacto</h2>
+        <p>
+          ¿Tienes una idea en mente? Podemos hacerla realidad en bisutería o madera.
+          Cuéntanos qué te gustaría y diseñamos algo especial para ti.
+        </p>
+        <p class="contact-phone">
+          Llámanos o mándanos mensaje al
+          <a href="tel:5548270460">55 4827 0460</a>.
+        </p>
+        <div class="contact-actions">
+          <a
+            class="btn btn-primary contact-whatsapp"
+            href="https://wa.me/525548270460?text=Hola,%20tengo%20una%20idea%20para%20un%20dise%C3%B1o%20personalizado"
+            target="_blank"
+          >
+            <span class="icon">💬</span>Escríbenos por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Hecho a mano con amor · Luz Creaciones</p>
+  </footer>
+
+  <!-- Overlay para zoom de imágenes -->
+  <div id="imageOverlay" class="image-overlay" style="display:none;">
+    <div class="image-overlay-backdrop"></div>
+    <div class="image-overlay-content">
+      <button id="overlayClose" class="overlay-close" aria-label="Cerrar imagen ampliada">×</button>
+      <img id="overlayImg" src="" alt="Vista ampliada" />
+    </div>
+  </div>
+
+  <!-- cache busting para obligar a cargar la nueva versión -->
+  <script src="app.js?v=3"></script>
+</body>
+</html>
