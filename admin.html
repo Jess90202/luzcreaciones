@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | Luz Creaciones</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="admin-body">
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="logo.png" alt="Luz Creaciones" class="logo" />
+        <div class="brand-text">
+          <h1>Panel de productos</h1>
+          <p>Gestiona tu catálogo desde aquí</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="card admin-login">
+      <h2>Acceso seguro</h2>
+      <p class="small">
+        Para guardar cambios en GitHub necesitas un
+        <strong>token personal</strong> de GitHub.<br />
+        (Se queda solo en este navegador, no se envía a nadie más).
+      </p>
+      <label>
+        Token de GitHub
+        <input type="password" id="githubToken" placeholder="ghp_..." />
+      </label>
+      <button id="btnGuardarToken" class="btn btn-primary full-width">
+        Guardar token en este navegador
+      </button>
+      <button id="btnBorrarToken" class="btn full-width">
+        Borrar token guardado
+      </button>
+      <p class="small">
+        Solo tú debes tener este token. No lo compartas.
+      </p>
+    </section>
+
+    <section id="admin-section" style="display:none;">
+      <div class="admin-layout">
+        <div class="card admin-form-card">
+          <h2>Agregar producto</h2>
+          <form id="formProducto" class="admin-form">
+            <label>Imagen
+              <input type="file" id="imagen" accept="image/*" required />
+            </label>
+            <label>Nombre
+              <input type="text" id="nombre" required />
+            </label>
+            <label>Precio
+              <input type="number" id="precio" required />
+            </label>
+            <label>Descripción
+              <textarea id="descripcion" rows="3"></textarea>
+            </label>
+            <label>Categoría
+              <select id="categoria">
+                <option value="bisuteria">Bisutería</option>
+                <option value="madera">Madera</option>
+              </select>
+            </label>
+            <button type="submit" class="btn btn-primary full-width">
+              Guardar producto
+            </button>
+          </form>
+        </div>
+
+        <div class="card admin-list-card">
+          <h2>Productos existentes</h2>
+          <div id="listaProductos" class="lista-admin">
+            <!-- Lista generada por JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Panel solo para administración de Luz Creaciones.</p>
+  </footer>
+
+  <script src="admin.js"></script>
+</body>
+</html>
