@@ -1,3 +1,12 @@
 {
-  "productos": []
+  "productos": [
+    {
+      "id": 1763654670791,
+      "nombre": "Prueba",
+      "precio": 500,
+      "descripcion": "Imagen de prueba",
+      "categoria": "bisuteria",
+      "imagen": "images/1763654669503_Gemini_Generated_Image_mwwys4mwwys4mwwy_1.png"
+    }
+  ]
 }
