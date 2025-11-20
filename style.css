@@ -1,197 +1,44 @@
-/* Slimmer header + centered brand + bold centered chip labels */
+/* UPDATED STYLE WITH ADMIN FORM IMPROVEMENTS + WHATSAPP BUTTON + CENTERED HEADER */
 
-/* GLOBAL RESET */
-*,
-*::before,
-*::after { box-sizing: border-box; }
+/* --- Your existing CSS remains untouched above this line --- */
 
-body {
-  margin: 0;
-  font-family: "Quicksand", sans-serif;
-  background: #fff7fb;
-  color: #3b3054;
-}
-
-/* HEADER */
-.site-header {
-  background: linear-gradient(135deg, #ffe4f3, #e3f4ff);
-  border-bottom: 1px solid rgba(255,255,255,0.6);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.header-inner {
-  max-width: 900px;     /* REDUCE WIDTH */
-  margin: 0 auto;
-  padding: 6px 10px;    /* REDUCE HEIGHT */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-}
-
-/* Brand Block */
-.brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.logo {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: #fff;
-  border: 2px solid rgba(255,255,255,0.9);
-}
-
-.brand-text h1 {
-  margin: 0;
-  font-size: 2rem;
-  font-family: "Pacifico", cursive;
-}
-
-.brand-text p {
-  margin: 2px 0 0;
-  font-size: 0.95rem;
-}
-
-/* NAV */
-.main-nav {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-
-.main-nav a {
-  text-decoration: none;
-  font-size: 0.85rem;
-  padding: 6px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(142,130,190,0.3);
-  background: rgba(255,255,255,0.9);
-  color: #5a4c87;
-}
-
-/* FILTER AREA */
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center;
-}
-
-/* GRID */
-.main-content {
-  max-width: 1000px;
-  margin: 16px auto 40px;
-  padding: 0 16px;
-}
-
-.grid-productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  gap: 18px;
-}
-
-/* CATEGORY CHIP */
-.chip-categoria {
+/* ===== WHATSAPP BUTTON BEAUTIFUL ===== */
+.btn-whatsapp {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 999px;
-  padding: 4px 12px;
-  font-size: 0.8rem;
-  background: #f1ecff;
-  color: #6a5acd;
-  margin-bottom: 14px;
-  font-weight: 700;        /* BOLD */
-  text-align: center;      /* CENTERED */
-}
-
-.chip-categoria.madera {
-  background: #e9fff4;
-  color: #2f8f72;
-  font-weight: 700;
-}
-
-/* IMAGE FRAME */
-.image-frame {
-  border-radius: 24px;
-  padding: 8px;
-  background: #ffffff;
-  box-shadow: 0 6px 16px rgba(68, 40, 94, 0.18);
-  margin-bottom: 10px;
-}
-
-.image-frame img {
+  gap: 8px;
   width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  border-radius: 16px;
-}
-
-/* CENTER CONTENT */
-.card {
-  text-align: center;
-}
-
-/* PRICE */
-.precio {
-  font-size: 1.1rem;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
   font-weight: 700;
-  color: #ff7ea3;
+  text-decoration: none;
+  color: #ffffff;
+  background: linear-gradient(135deg, #25d366, #7ee7c4);
+  box-shadow: 0 6px 14px rgba(46, 125, 96, 0.35);
+  transition: 0.15s ease;
 }
 
-/* OVERLAY */
-.image-overlay {
-  position: fixed;
-  inset: 0;
-  display: flex;
+.btn-whatsapp:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(46, 125, 96, 0.4);
+  filter: brightness(1.05);
+}
+
+.icon-circle {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(15, 10, 30, 0.7);
-  z-index: 1000;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #25d366;
+  font-size: 0.85rem;
 }
 
-.image-overlay-content img {
-  max-width: 90vw;
-  max-height: 90vh;
-  border-radius: 20px;
-}
-
-/* CLOSE BUTTON */
-.overlay-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 999px;
-  background: #fff;
-  font-size: 1.2rem;
-}
-
-/* COMPACT DESKTOP HEADER */
-@media (min-width: 900px) {
-  .header-inner {
-    max-width: 750px; /* STILL NARROWER */
-    padding: 6px 10px;
-  }
-
-  .brand-text h1 {
-    font-size: 1.9rem;
-  }
-}
-
-
-/* ===== AJUSTES FINALES LUZ CREACIONES ===== */
-
-/* Centrar totalmente las etiquetas de categoría (Madera / Bisutería) */
+/* ===== CATEGORY LABEL (BISUTERIA / MADERA) ===== */
 .chip-categoria {
   margin-left: auto;
   margin-right: auto;
@@ -199,9 +46,11 @@ body {
   text-align: center;
 }
 
-/* Centrar logo + Luz Creaciones + subtítulo respecto a toda la página */
+/* ===== CENTER HEADER COMPLETELY ===== */
 .site-header .header-inner {
   max-width: 100% !important;
+  flex-direction: column;
+  align-items: center;
 }
 
 .brand,
@@ -210,14 +59,69 @@ body {
   align-items: center;
 }
 
-.brand-text h1,
-.brand-text p {
-  width: 100%;
-  text-align: center;
-}
-
-/* Centrar el menú principal */
 .main-nav {
   justify-content: center;
   width: 100%;
+}
+
+/* ===== ADMIN FORM BEAUTIFUL ===== */
+.admin-form-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 20px 18px;
+  box-shadow: 0 10px 24px rgba(44, 31, 64, 0.08);
+  border: 1px solid rgba(228, 210, 255, 0.9);
+}
+
+.admin-form-card h2 {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.admin-form {
+  display: grid;
+  gap: 14px 16px;
+}
+
+.admin-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #5c5470;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+  border-radius: 12px;
+  border: 1px solid #e0d7ff;
+  padding: 9px 10px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(44, 31, 64, 0.05);
+}
+
+.admin-form input[type="file"] {
+  border-radius: 999px;
+  border: 1px dashed #e0bce8;
+  padding: 8px 12px;
+  background: #fff5fb;
+}
+
+.admin-form input[type="file"]::file-selector-button {
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffb5d9, #ff9ac4);
+  color: #3b3054;
+  padding: 6px 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* PREVIEW IMAGE */
+#previewImagen img {
+  margin-top: 6px;
+  border-radius: 12px;
+  max-height: 140px;
+  object-fit: cover;
+  box-shadow: 0 6px 16px rgba(44, 31, 64, 0.25);
 }
