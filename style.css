@@ -113,7 +113,7 @@ body {
 
 /* Aligned blocks for Category and Search */
 .filters-aligned-block {
-  max-width: 460px;
+  max-width: 380px;
   width: 100%;
   margin: 0 auto 14px;
   text-align: center;
@@ -182,7 +182,7 @@ body {
   background: #ffffff;
   border: 1px solid rgba(177, 153, 218, 0.55);
   box-shadow: 0 10px 26px rgba(177, 153, 218, 0.35);
-  max-width: 480px;
+  max-width: 380px;
   margin: 0 auto;
 }
 
@@ -215,6 +215,7 @@ body {
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
+  align-items: center;
 }
 
 .filter-group {
@@ -452,7 +453,7 @@ body {
   margin: 0;
   font-size: 0.95rem;
   color: #5a4c87;
-  max-width: 460px;
+  max-width: 380px;
 }
 
 .contact-phone {
@@ -845,4 +846,27 @@ body {
   0%, 100% { transform: scale(1); }
   30% { transform: scale(1.15); }
   60% { transform: scale(0.95); }
+}
+
+/* Versión web: alinear filtros en una sola fila y ocultar textos */
+@media (min-width: 768px) {
+  .header-filters .filters {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .filters-aligned-block {
+    margin-bottom: 0;
+  }
+
+  .filters-aligned-block .filter-label {
+    display: none;
+  }
+
+  .filters-aligned-block.categorias-block .categoria-chips {
+    justify-content: center;
+  }
 }
