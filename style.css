@@ -1,0 +1,247 @@
+/* UPDATED STYLE WITH ADMIN FORM IMPROVEMENTS + WHATSAPP BUTTON + CENTERED HEADER */
+
+/* --- Your existing CSS remains untouched above this line --- */
+
+/* ===== WHATSAPP BUTTON BEAUTIFUL ===== */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #ffffff;
+  background: linear-gradient(135deg, #25d366, #7ee7c4);
+  box-shadow: 0 6px 14px rgba(46, 125, 96, 0.35);
+  transition: 0.15s ease;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(46, 125, 96, 0.4);
+  filter: brightness(1.05);
+}
+
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #25d366;
+  font-size: 0.85rem;
+}
+
+/* ===== CATEGORY LABEL (BISUTERIA / MADERA) ===== */
+.chip-categoria {
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ===== CENTER HEADER COMPLETELY ===== */
+.site-header .header-inner {
+  max-width: 100% !important;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand,
+.brand-text {
+  text-align: center;
+  align-items: center;
+}
+
+.main-nav {
+  justify-content: center;
+  width: 100%;
+}
+
+/* ===== ADMIN FORM BEAUTIFUL ===== */
+.admin-form-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 20px 18px;
+  box-shadow: 0 10px 24px rgba(44, 31, 64, 0.08);
+  border: 1px solid rgba(228, 210, 255, 0.9);
+}
+
+.admin-form-card h2 {
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.admin-form {
+  display: grid;
+  gap: 14px 16px;
+}
+
+.admin-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #5c5470;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+  border-radius: 12px;
+  border: 1px solid #e0d7ff;
+  padding: 9px 10px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(44, 31, 64, 0.05);
+}
+
+.admin-form input[type="file"] {
+  border-radius: 999px;
+  border: 1px dashed #e0bce8;
+  padding: 8px 12px;
+  background: #fff5fb;
+}
+
+.admin-form input[type="file"]::file-selector-button {
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffb5d9, #ff9ac4);
+  color: #3b3054;
+  padding: 6px 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* PREVIEW IMAGE */
+#previewImagen img {
+  margin-top: 6px;
+  border-radius: 12px;
+  max-height: 140px;
+  object-fit: cover;
+  box-shadow: 0 6px 16px rgba(44, 31, 64, 0.25);
+}
+
+/* ===== Paleta y gradiente inspirados en ANTIGRA ===== */
+:root {
+  --primary-dark: #9575cd;
+  --primary-light: #b39ddb;
+  --accent-pink: #f48fb1;
+  --accent-gold: #fff59d;
+  --text-main: #5d4037;
+  --text-light: #8d6e63;
+  --bg-body-soft: #fff9fa;
+  --bg-card-soft: #ffffff;
+  --bg-header-glass: rgba(255, 255, 255, 0.9);
+  --radius-pill: 999px;
+  --radius-lg: 20px;
+  --shadow-soft: 0 10px 30px rgba(149, 117, 205, 0.1);
+  --shadow-hover: 0 20px 40px rgba(149, 117, 205, 0.2);
+  --gradient-brand: linear-gradient(135deg, #b39ddb 0%, #9575cd 100%);
+}
+
+.brand-text h1 {
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+/* ===== Barra de filtros con pills y buscador tipo ANTIGRA ===== */
+.filters-bar {
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  padding: 12px 0;
+}
+
+.filters-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.cat-pill {
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(149, 117, 205, 0.35);
+  background: #ffffff;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-main);
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+}
+
+.cat-pill:hover {
+  background: rgba(149, 117, 205, 0.06);
+  box-shadow: 0 4px 12px rgba(149, 117, 205, 0.12);
+}
+
+.cat-pill.active {
+  background: var(--gradient-brand);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: var(--shadow-soft);
+}
+
+.search-wrapper {
+  position: relative;
+  min-width: 220px;
+  max-width: 340px;
+  flex: 1 1 220px;
+}
+
+.search-wrapper input {
+  width: 100%;
+  padding: 10px 18px 10px 40px;
+  border-radius: var(--radius-pill);
+  border: 2px solid transparent;
+  background: #f0f2f5;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.search-wrapper input:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: var(--accent-pink);
+  box-shadow: 0 4px 12px rgba(255, 126, 163, 0.15);
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 0.9rem;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .filters-inner {
+    align-items: stretch;
+  }
+  .search-wrapper {
+    max-width: 100%;
+  }
+}
