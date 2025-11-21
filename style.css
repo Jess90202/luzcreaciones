@@ -22,7 +22,7 @@ body {
 }
 
 .header-inner {
-  max-width: 28px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 8px 16px;
   display: flex;
@@ -41,7 +41,7 @@ body {
 
 .logo {
   width: 56px;
-  height: 28px;
+  height: 56px;
   border-radius: 50%;
   object-fit: cover;
   background: #fff;
@@ -956,8 +956,8 @@ body {
   outline: none;
   background: rgba(255,255,255,0.96);
   border-radius: 999px;
-  width: 34px;
-  height: 34px;
+  width: 28px;
+  height: 28px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -975,13 +975,13 @@ body {
   position: relative;
 }
 
-.menu-toggle .menu-line {
-  display:block;
-  width:12px;
-  height:2px;
-  border-radius:999px;
-  background:#5a4c87;
-  margin:2px 0;
+.menu-symbol {
+  font-size: 1.1rem;
+  line-height: 1;
+  color: #5a4c87;
+  font-weight: 600;
+  display: inline-block;
+  transform: translateY(-1px);
 }
 
 /* Marca clickeable (logo + texto) en una sola línea */
@@ -1014,7 +1014,7 @@ body {
 }
 
 .search-toggle-icon {
-  font-size: 1.15rem;
+  font-size: 0.95rem;
 }
 
 /* Panel de navegación + filtros */
