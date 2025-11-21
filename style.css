@@ -113,7 +113,7 @@ body {
 
 /* Aligned blocks for Category and Search */
 .filters-aligned-block {
-  max-width: 480px;
+  max-width: 460px;
   width: 100%;
   margin: 0 auto 14px;
   text-align: center;
@@ -129,7 +129,7 @@ body {
 
 .filters-aligned-block .categoria-chips {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 8px;
 }
