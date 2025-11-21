@@ -133,7 +133,6 @@ function renderListaProductos() {
     cont.appendChild(div);
   });
 
-  // Eventos de editar / eliminar
   cont.querySelectorAll(".btn-editar").forEach(btn => {
     btn.addEventListener("click", () => {
       const idx = parseInt(btn.getAttribute("data-idx"), 10);
@@ -205,7 +204,6 @@ function initFormulario() {
     const estaEditando = idxHidden !== "";
 
     try {
-      // Si hay un archivo nuevo, subir a Cloudinary
       if (fileInput.files && fileInput.files[0]) {
         imagenUrl = await subirImagenACloudinary(fileInput.files[0]);
       }

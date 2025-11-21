@@ -1,5 +1,4 @@
 let productosData = [];
-let categoriaActual = "todas";
 
 function coincideFiltro(producto, categoria, texto) {
   const catOk = categoria === "todas" || producto.categoria === categoria;
@@ -17,12 +16,15 @@ function renderCatalogo() {
   const sinResultados = document.getElementById("sinResultados");
   if (!contenedor) return;
 
+  const categoriaSelect = document.getElementById("categoriaSelect");
   const buscador = document.getElementById("buscador");
+
+  const categoria = categoriaSelect ? categoriaSelect.value : "todas";
   const texto = buscador ? buscador.value.trim() : "";
 
   contenedor.innerHTML = "";
 
-  const filtrados = productosData.filter(p => coincideFiltro(p, categoriaActual, texto));
+  const filtrados = productosData.filter(p => coincideFiltro(p, categoria, texto));
 
   if (filtrados.length === 0) {
     if (sinResultados) sinResultados.style.display = "block";
@@ -44,10 +46,10 @@ function renderCatalogo() {
         <img src="${p.imagen}" alt="${p.nombre || ""}" class="zoomable-img" draggable="false" oncontextmenu="return false;">
       </div>
       <h3>${p.nombre || ""}</h3>
-      <div class="precio">$${p.precio}</div>
+      <p class="precio">$${p.precio}</p>
       <p>${p.descripcion || ""}</p>
       <a class="btn btn-whatsapp"
-         href="https://wa.me/525548270460?text=${"${encodeURIComponent('Hola, me interesa el producto: ' + (p.nombre || ''))}"}"
+         href="https://wa.me/525548270460?text=${encodeURIComponent("Hola, me interesa el producto: " + (p.nombre || ""))}"
          target="_blank">
         <span class="icon-circle">💬</span>
         <span>Pedir por WhatsApp</span>
@@ -74,88 +76,90 @@ async function cargarCatalogo() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Píldoras de categoría
-  const pills = document.querySelectorAll(".cat-pill");
-  pills.forEach(pill => {
-    pill.addEventListener("click", () => {
-      pills.forEach(p => p.classList.remove("active"));
-      pill.classList.add("active");
-      categoriaActual = pill.getAttribute("data-cat") || "todas";
-      renderCatalogo();
-    });
-  });
-
-  // Buscador
+  const categoriaSelect = document.getElementById("categoriaSelect");
   const buscador = document.getElementById("buscador");
+
+  if (categoriaSelect) {
+    categoriaSelect.addEventListener("change", renderCatalogo);
+  }
   if (buscador) {
     buscador.addEventListener("input", () => {
       renderCatalogo();
     });
   }
 
-  // Navegación Inicio / Contacto + filtros
+  cargarCatalogo();
+
+  // Navegación Inicio / Contacto
   const navInicio = document.getElementById("navInicio");
   const navContacto = document.getElementById("navContacto");
   const contactoSection = document.getElementById("contacto");
-  const productosSection = document.getElementById("productos");
-  const filtersBar = document.querySelector(".filters-bar");
 
-  function mostrarInicio() {
-    if (contactoSection) contactoSection.style.display = "none";
-    if (productosSection) productosSection.style.display = "grid";
-    if (filtersBar) filtersBar.style.display = "block";
-    if (navInicio) navInicio.classList.add("active");
-    if (navContacto) navContacto.classList.remove("active");
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  function setActive(link) {
+    if (!navInicio || !navContacto) return;
+    navInicio.classList.remove("active");
+    navContacto.classList.remove("active");
+    link.classList.add("active");
   }
 
-  function mostrarContacto() {
-    if (contactoSection) contactoSection.style.display = "block";
-    if (productosSection) productosSection.style.display = "none";
-    if (filtersBar) filtersBar.style.display = "none";
-    if (navContacto) navContacto.classList.add("active");
-    if (navInicio) navInicio.classList.remove("active");
-    const contacto = document.getElementById("contacto");
-    if (contacto) {
-      contacto.scrollIntoView({ behavior: "smooth" });
+  if (navInicio && contactoSection) {
+    navInicio.addEventListener("click", (e) => {
+      e.preventDefault();
+      contactoSection.style.display = "none";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setActive(navInicio);
+      if (window.location.hash) {
+        history.replaceState(null, "", window.location.pathname);
+      }
+    });
+  }
+
+  if (navContacto && contactoSection) {
+    navContacto.addEventListener("click", (e) => {
+      e.preventDefault();
+      contactoSection.style.display = "block";
+      contactoSection.scrollIntoView({ behavior: "smooth" });
+      setActive(navContacto);
+      history.replaceState(null, "", "#contacto");
+    });
+
+    if (window.location.hash === "#contacto") {
+      contactoSection.style.display = "block";
+      setTimeout(() => {
+        contactoSection.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+      setActive(navContacto);
     }
   }
 
-  if (navInicio) {
-    navInicio.addEventListener("click", (e) => {
-      e.preventDefault();
-      mostrarInicio();
-    });
-  }
-  if (navContacto) {
-    navContacto.addEventListener("click", (e) => {
-      e.preventDefault();
-      mostrarContacto();
-    });
-  }
-
-  // Zoom de imágenes
+  // ZOOM DE IMÁGENES
   const overlay = document.getElementById("imageOverlay");
   const overlayImg = document.getElementById("overlayImg");
   const overlayClose = document.getElementById("overlayClose");
 
   function cerrarOverlay() {
     if (!overlay || !overlayImg) return;
-    overlay.style.display = "none";
-    overlayImg.src = "";
+    overlay.classList.remove("open");
+    overlay.setAttribute("aria-hidden", "true");
+    setTimeout(() => {
+      overlayImg.src = "";
+    }, 180);
   }
 
-  document.body.addEventListener("click", (e) => {
-    const img = e.target.closest(".zoomable-img");
-    if (img && overlay && overlayImg) {
-      overlayImg.src = img.src;
-      overlay.style.display = "flex";
-      return;
-    }
-    if (e.target === overlay || e.target.classList.contains("image-overlay-backdrop")) {
-      cerrarOverlay();
-    }
-  });
+  if (overlay && overlayImg) {
+    document.body.addEventListener("click", (e) => {
+      const img = e.target.closest(".zoomable-img");
+      if (img) {
+        overlayImg.src = img.src;
+        overlay.classList.add("open");
+        overlay.setAttribute("aria-hidden", "false");
+        return;
+      }
+      if (e.target === overlay || e.target.classList.contains("image-overlay-backdrop")) {
+        cerrarOverlay();
+      }
+    });
+  }
 
   if (overlayClose) {
     overlayClose.addEventListener("click", (e) => {
@@ -170,11 +174,10 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
     }
   });
+
   document.addEventListener("dragstart", (e) => {
     if (e.target.tagName === "IMG") {
       e.preventDefault();
     }
   });
-
-  cargarCatalogo();
 });
