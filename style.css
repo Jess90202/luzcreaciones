@@ -58,6 +58,10 @@ body {
   font-weight: 700;
   font-family: "Pacifico", cursive;
   letter-spacing: 0.03em;
+  background: linear-gradient(90deg, #ff7eb3, #b199da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .brand-text p {
@@ -140,6 +144,38 @@ body {
   box-shadow: 0 4px 10px rgba(255, 154, 196, 0.4);
 }
 /* FILTERS */
+/* SEARCH PILL */
+.search-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid rgba(177, 153, 218, 0.55);
+  box-shadow: 0 10px 26px rgba(177, 153, 218, 0.35);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.search-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.search-pill input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.95rem;
+  color: #8e83b8;
+  width: 100%;
+}
+
+.search-pill input::placeholder {
+  color: #b3a9c9;
+}
+
 
 .header-filters {
   padding-top: 4px;
@@ -715,8 +751,16 @@ body {
   }
 
   .brand-text h1 {
-    font-size: 1.8rem;
-  }
+  margin: 0;
+  font-size: 2.1rem;
+  font-weight: 700;
+  font-family: "Pacifico", cursive;
+  letter-spacing: 0.03em;
+  background: linear-gradient(90deg, #ff7eb3, #b199da);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
   .admin-layout {
     grid-template-columns: 1fr;
@@ -727,6 +771,7 @@ body {
   }
 }
 
+
 @media (max-width: 600px) {
   .filter-group-categorias,
   .filter-group-busqueda {
@@ -734,41 +779,27 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-  
+  }
+
+  .filter-group-categorias .filter-label,
   .filter-group-busqueda .filter-label {
     width: 100%;
-    text-align: center !important;
+    text-align: center;
     display: block;
-    margin: 0 auto;
+    margin-bottom: 4px;
   }
-}
 
   .categoria-chips {
     justify-content: center;
     width: 100%;
   }
 
-  .filter-group-categorias .filter-label,
-  .filter-group-busqueda .filter-label {
-    text-align: center !important;
-    width: 100%;
-    display: block;
-  }
-
   .filter-group-busqueda .search-pill {
     width: 100%;
-    max-width: 320px;
+    max-width: 340px;
     margin: 0 auto;
   }
 }
-.filter-group-categorias .filter-label {
-    text-align: center;
-    width: 100%;
-    display: block;
-  }
-}
-
-
 .footer-heart {
   display: inline-block;
   margin: 0 2px;
