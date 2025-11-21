@@ -99,16 +99,29 @@ body {
   gap: 8px;
 }
 
+
+
+
+
+
+
+/* CATEGORY FILTER BUTTONS (chips styled like main menu buttons) */
+.categoria-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
 .chip-button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
   font-size: 0.85rem;
   padding: 6px 14px;
   border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(142, 130, 190, 0.3);
-  background: rgba(255,255,255,0.9);
   color: #5a4c87;
   font-weight: 600;
   cursor: pointer;
@@ -122,8 +135,8 @@ body {
 
 .chip-button.active {
   background: linear-gradient(135deg, #ffb5d9, #ff9ac4);
-  color: #3b3054;
   border-color: transparent;
+  color: #3b3054;
   box-shadow: 0 4px 10px rgba(255, 154, 196, 0.4);
 }
 /* FILTERS */
@@ -721,7 +734,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+  
+  .filter-group-busqueda .filter-label {
+    width: 100%;
+    text-align: center !important;
+    display: block;
+    margin: 0 auto;
   }
+}
 
   .categoria-chips {
     justify-content: center;
