@@ -1005,7 +1005,7 @@ body {
 }
 
 .brand-clickable .logo {
-  width: 40px;
+  width: 46px;
   height: auto;
 }
 
@@ -1033,7 +1033,7 @@ body {
   }
 
   .brand-clickable .logo {
-    width: 34px;
+    width: 39px;
   }
 
   /* Ocultar panel por defecto en móvil */
@@ -1079,6 +1079,13 @@ body {
   .topbar {
     justify-content: center;
   }
+  .brand-clickable {
+    flex: 0 auto;
+    margin: 0 auto;
+  }
+  .brand-clickable .brand {
+    justify-content: center;
+  }
 }
 
 @keyframes headerPanelIn {
@@ -1089,5 +1096,13 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-width:900px){
+  .topbar .brand-text h1{
+    text-align:center;
+    width:100%;
+    display:block;
   }
 }
