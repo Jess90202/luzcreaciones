@@ -992,6 +992,14 @@ body {
   gap: 8px;
 }
 
+/* For header app layout, keep brand in a row */
+.topbar .brand {
+  flex-direction: row;
+}
+.topbar .brand-text {
+  text-align: left;
+}
+
 .brand-clickable .logo {
   width: 44px;
   height: auto;
@@ -1010,7 +1018,7 @@ body {
   margin-bottom: 4px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   .brand-clickable .brand-text h1 {
     font-size: 1.35rem;
   }
@@ -1041,7 +1049,7 @@ body {
 }
 
 /* En desktop, mantener el panel siempre visible */
-@media (min-width: 721px) {
+@media (min-width: 901px) {
   #filtersPanel {
     display: flex !important;
   }
