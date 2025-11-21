@@ -16,10 +16,10 @@ function renderCatalogo() {
   const sinResultados = document.getElementById("sinResultados");
   if (!contenedor) return;
 
-  const activeChip = document.querySelector(".filter-chip.active");
   const buscador = document.getElementById("buscador");
+  const activeChip = document.querySelector(".chip-button.active");
 
-  const categoria = activeChip ? activeChip.dataset.category : "todas";
+  const categoria = activeChip ? activeChip.dataset.categoria : "todas";
   const texto = buscador ? buscador.value.trim() : "";
 
   contenedor.innerHTML = "";
@@ -76,20 +76,19 @@ async function cargarCatalogo() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const filterChips = document.querySelectorAll(".filter-chip");
   const buscador = document.getElementById("buscador");
+  const categoriaChips = document.querySelectorAll(".chip-button");
 
-  if (filterChips.length > 0) {
-    filterChips.forEach(chip => {
-      chip.addEventListener("click", () => {
-        // Remover active de todos
-        filterChips.forEach(c => c.classList.remove("active"));
-        // Agregar active al clickeado
-        chip.classList.add("active");
+  if (categoriaChips.length > 0) {
+    categoriaChips.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        categoriaChips.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
         renderCatalogo();
       });
     });
   }
+
   if (buscador) {
     buscador.addEventListener("input", () => {
       renderCatalogo();
@@ -112,6 +111,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (navInicio && contactoSection) {
     navInicio.addEventListener("click", (e) => {
+      e.preventDefault();
+      contactoSection.style.display = "none";
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      setActive(navInicio);
+      if (window.location.hash) {
+        history.replaceState(null, "", window.location.pathname);
+      }
+    });
+  }
+
+  // Hacer clic en el logo o en "Luz Creaciones" lleva al inicio
+  const brand = document.querySelector(".brand");
+  if (brand && navInicio && contactoSection) {
+    brand.addEventListener("click", (e) => {
       e.preventDefault();
       contactoSection.style.display = "none";
       window.scrollTo({ top: 0, behavior: "smooth" });
