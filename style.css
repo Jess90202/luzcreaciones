@@ -956,8 +956,8 @@ body {
   outline: none;
   background: rgba(255,255,255,0.96);
   border-radius: 999px;
-  width: 42px;
-  height: 42px;
+  width: 34px;
+  height: 34px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -977,7 +977,7 @@ body {
 
 .menu-toggle .menu-line {
   display: block;
-  width: 18px;
+  width: 14px;
   height: 2px;
   border-radius: 999px;
   background: #5a4c87;
