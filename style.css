@@ -1036,6 +1036,10 @@ body {
     width: 39px;
   }
 
+  .brand-clickable .brand-text {
+    text-align: center;
+  }
+
   /* Ocultar panel por defecto en móvil */
   #filtersPanel {
     display: none;
@@ -1099,10 +1103,4 @@ body {
   }
 }
 
-@media (max-width:900px){
-  .topbar .brand-text h1{
-    text-align:center;
-    width:100%;
-    display:block;
-  }
-}
+
