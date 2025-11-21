@@ -870,3 +870,68 @@ body {
     justify-content: center;
   }
 }
+
+@media (max-width: 720px) {
+  /* Compact header spacing on mobile */
+  header {
+    padding-top: 10px;
+  }
+
+  .header-inner {
+    gap: 6px;
+  }
+
+  .brand {
+    gap: 6px;
+  }
+
+  .brand-text h1 {
+    font-size: 1.7rem;
+  }
+
+  .brand-text p {
+    font-size: 0.9rem;
+    margin-top: 2px;
+  }
+
+  .header-nav {
+    margin-top: 4px;
+  }
+
+  .header-nav button,
+  .header-nav .nav-btn {
+    padding: 6px 14px;
+    font-size: 0.78rem;
+  }
+
+  .filters {
+    gap: 6px;
+    margin-top: 6px;
+  }
+
+  .filters-aligned-block {
+    margin-bottom: 8px;
+  }
+
+  .filters-aligned-block .filter-label {
+    font-size: 0.78rem;
+  }
+
+  .categoria-chips {
+    gap: 6px;
+  }
+
+  .chip-button {
+    padding: 4px 10px;
+    font-size: 0.78rem;
+  }
+
+  .search-pill {
+    padding: 8px 14px;
+    max-width: 320px;
+  }
+
+  .search-pill input {
+    font-size: 0.85rem;
+  }
+}
