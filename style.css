@@ -40,7 +40,7 @@ body {
 }
 
 .logo {
-  width: 56px;
+  width: 65px;
   height: 56px;
   border-radius: 50%;
   object-fit: cover;
@@ -1104,3 +1104,5 @@ body {
 }
 
 
+
+.menu-symbol { font-size: 1.1rem; line-height: 1; color: #5a4c87; font-weight: 600; }
