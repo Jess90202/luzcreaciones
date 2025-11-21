@@ -14,6 +14,13 @@
       "descripcion": "Nueva Prueba",
       "categoria": "bisuteria",
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1763678865/qhovwxcc3r4bvvpngwqb.png"
+    },
+    {
+      "nombre": "Nue",
+      "precio": 355,
+      "descripcion": "Hola",
+      "categoria": "bisuteria",
+      "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1763684012/ide3vstzkdxq9hfpufea.jpg"
     }
   ]
 }
