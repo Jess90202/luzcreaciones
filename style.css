@@ -935,3 +935,125 @@ body {
     font-size: 0.85rem;
   }
 }
+
+
+/* NUEVO HEADER COMPACTO TIPO APP */
+
+.topbar {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.icon-button {
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.95);
+  border-radius: 999px;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(59, 48, 84, 0.18);
+  cursor: pointer;
+  padding: 0;
+}
+
+.icon-button:active {
+  transform: translateY(1px);
+}
+
+.menu-toggle .menu-line {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: #5a4c87;
+  margin: 2px 0;
+}
+
+.brand-clickable {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.brand-clickable .brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.brand-clickable .logo {
+  width: 44px;
+  height: auto;
+}
+
+.brand-clickable .brand-text {
+  text-align: left;
+}
+
+.search-toggle-icon {
+  font-size: 1.1rem;
+}
+
+/* Panel de navegación + filtros */
+.main-nav-wrapper {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 720px) {
+  .brand-clickable .brand-text h1 {
+    font-size: 1.35rem;
+  }
+
+  .brand-clickable .brand-text p {
+    display: none;
+  }
+
+  .brand-clickable .logo {
+    width: 34px;
+  }
+
+  /* Ocultar panel por defecto en móvil */
+  #filtersPanel {
+    display: none;
+  }
+
+  .site-header.menu-open #filtersPanel,
+  .site-header.search-open #filtersPanel {
+    display: flex;
+    animation: headerPanelIn 0.18s ease-out;
+  }
+
+  .header-inner.header-filters {
+    padding-top: 4px;
+    padding-bottom: 10px;
+  }
+}
+
+/* En desktop, mantener el panel siempre visible */
+@media (min-width: 721px) {
+  #filtersPanel {
+    display: flex !important;
+  }
+}
+
+@keyframes headerPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,3 +1,4 @@
+<!-- Header compacto pendiente de implementación -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,7 +13,13 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="header-inner">
+  <div class="topbar">
+    <button class="icon-button menu-toggle" id="menuToggle" aria-label="Abrir menú">
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+      <span class="menu-line"></span>
+    </button>
+    <button class="brand-clickable" id="brandHome" aria-label="Ir al inicio">
       <div class="brand">
         <img src="logo.png" alt="Luz Creaciones" class="logo" />
         <div class="brand-text">
@@ -20,14 +27,20 @@
           <p>Bisutería y decoración en madera</p>
         </div>
       </div>
+    </button>
+    <button class="icon-button search-toggle" id="searchToggle" aria-label="Buscar productos">
+      <span class="search-toggle-icon">🔍</span>
+    </button>
+  </div>
+  <div class="header-inner header-filters" id="filtersPanel">
+    <div class="main-nav-wrapper">
       <nav class="main-nav">
         <a href="#inicio" id="navInicio" class="active">Inicio</a>
         <a href="#contacto" id="navContacto">Contacto</a>
         <a href="admin.html">Admin</a>
       </nav>
     </div>
-    <div class="header-inner header-filters">
-      <div class="filters">
+    <div class="filters">
         <!-- Categorías como botones -->
         <div class="filters-aligned-block categorias-block">
           <span class="filter-label">Categoría</span>
@@ -51,8 +64,8 @@
           </div>
         </div>
       </div>
-    </div>
-  </header>
+  </div>
+</header>
 
   <main id="inicio" class="main-content">
     <section id="productos" class="grid-productos">

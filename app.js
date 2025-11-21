@@ -79,6 +79,35 @@ document.addEventListener("DOMContentLoaded", () => {
   const buscador = document.getElementById("buscador");
   const categoriaChips = document.querySelectorAll(".chip-button");
 
+  const siteHeader = document.querySelector(".site-header");
+  const menuToggle = document.getElementById("menuToggle");
+  const searchToggle = document.getElementById("searchToggle");
+  const filtersPanel = document.getElementById("filtersPanel");
+
+  if (menuToggle && siteHeader) {
+    menuToggle.addEventListener("click", () => {
+      const nowOpen = !siteHeader.classList.contains("menu-open");
+      siteHeader.classList.toggle("menu-open", nowOpen);
+      if (nowOpen) {
+        siteHeader.classList.remove("search-open");
+      }
+    });
+  }
+
+  if (searchToggle && siteHeader) {
+    searchToggle.addEventListener("click", () => {
+      const nowOpen = !siteHeader.classList.contains("search-open");
+      siteHeader.classList.toggle("search-open", nowOpen);
+      if (nowOpen) {
+        siteHeader.classList.remove("menu-open");
+        const buscador = document.getElementById("buscador");
+        if (buscador) {
+          setTimeout(() => buscador.focus(), 80);
+        }
+      }
+    });
+  }
+
   if (categoriaChips.length > 0) {
     categoriaChips.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -118,19 +147,25 @@ document.addEventListener("DOMContentLoaded", () => {
       if (window.location.hash) {
         history.replaceState(null, "", window.location.pathname);
       }
+      if (siteHeader) {
+        siteHeader.classList.remove("menu-open", "search-open");
+      }
     });
   }
 
   // Hacer clic en el logo o en "Luz Creaciones" lleva al inicio
-  const brand = document.querySelector(".brand");
-  if (brand && navInicio && contactoSection) {
-    brand.addEventListener("click", (e) => {
+  const brandHome = document.getElementById("brandHome");
+  if (brandHome && navInicio && contactoSection) {
+    brandHome.addEventListener("click", (e) => {
       e.preventDefault();
       contactoSection.style.display = "none";
       window.scrollTo({ top: 0, behavior: "smooth" });
       setActive(navInicio);
       if (window.location.hash) {
         history.replaceState(null, "", window.location.pathname);
+      }
+      if (siteHeader) {
+        siteHeader.classList.remove("menu-open", "search-open");
       }
     });
   }
@@ -142,6 +177,9 @@ document.addEventListener("DOMContentLoaded", () => {
       contactoSection.scrollIntoView({ behavior: "smooth" });
       setActive(navContacto);
       history.replaceState(null, "", "#contacto");
+      if (siteHeader) {
+        siteHeader.classList.remove("menu-open", "search-open");
+      }
     });
 
     if (window.location.hash === "#contacto") {
