@@ -937,6 +937,7 @@ body {
 }
 
 
+
 /* NUEVO HEADER COMPACTO TIPO APP */
 
 .topbar {
@@ -946,26 +947,32 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
+  gap: 10px;
 }
 
+/* Botones redondeados tipo app */
 .icon-button {
-  border: none;
+  border: 1px solid rgba(255,255,255,0.9);
   outline: none;
-  background: rgba(255,255,255,0.95);
+  background: rgba(255,255,255,0.96);
   border-radius: 999px;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 10px rgba(59, 48, 84, 0.18);
+  box-shadow: 0 6px 14px rgba(59, 48, 84, 0.16);
   cursor: pointer;
   padding: 0;
 }
 
 .icon-button:active {
   transform: translateY(1px);
+}
+
+/* Icono hamburguesa mejor definido */
+.menu-toggle {
+  position: relative;
 }
 
 .menu-toggle .menu-line {
@@ -977,6 +984,7 @@ body {
   margin: 2px 0;
 }
 
+/* Marca clickeable (logo + texto) en una sola línea */
 .brand-clickable {
   border: none;
   background: transparent;
@@ -988,20 +996,16 @@ body {
 .brand-clickable .brand {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
+  justify-content: flex-start;
+  gap: 10px;
 }
 
-/* For header app layout, keep brand in a row */
 .topbar .brand {
   flex-direction: row;
 }
-.topbar .brand-text {
-  text-align: left;
-}
 
 .brand-clickable .logo {
-  width: 44px;
+  width: 40px;
   height: auto;
 }
 
@@ -1010,7 +1014,7 @@ body {
 }
 
 .search-toggle-icon {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 /* Panel de navegación + filtros */
@@ -1024,7 +1028,8 @@ body {
   }
 
   .brand-clickable .brand-text p {
-    display: none;
+    display: block;
+    font-size: 0.8rem;
   }
 
   .brand-clickable .logo {
@@ -1036,10 +1041,25 @@ body {
     display: none;
   }
 
-  .site-header.menu-open #filtersPanel,
+  /* MENÚ abierto: mostrar navegación + categorías, ocultar búsqueda */
+  .site-header.menu-open #filtersPanel {
+    display: flex;
+    animation: headerPanelIn 0.18s ease-out;
+  }
+
+  .site-header.menu-open .filter-group-busqueda {
+    display: none;
+  }
+
+  /* BÚSQUEDA abierta: mostrar solo el cuadro de búsqueda */
   .site-header.search-open #filtersPanel {
     display: flex;
     animation: headerPanelIn 0.18s ease-out;
+  }
+
+  .site-header.search-open .main-nav-wrapper,
+  .site-header.search-open .categorias-block {
+    display: none;
   }
 
   .header-inner.header-filters {
@@ -1052,6 +1072,12 @@ body {
 @media (min-width: 901px) {
   #filtersPanel {
     display: flex !important;
+  }
+  .topbar .icon-button {
+    display: none;
+  }
+  .topbar {
+    justify-content: center;
   }
 }
 
