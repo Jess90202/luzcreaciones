@@ -110,6 +110,33 @@ body {
 
 
 
+
+/* Aligned blocks for Category and Search */
+.filters-aligned-block {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto 14px;
+  text-align: center;
+}
+
+.filters-aligned-block .filter-label {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.filters-aligned-block .categoria-chips {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filters-aligned-block .search-pill {
+  margin: 0 auto;
+}
 /* CATEGORY FILTER BUTTONS (chips styled like main menu buttons) */
 .categoria-chips {
   display: flex;
