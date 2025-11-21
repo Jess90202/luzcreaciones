@@ -1,4 +1,7 @@
 let productosData = [];
+let categoriaActual = "todas";
+let textoBusqueda = "";
+
 
 function coincideFiltro(producto, categoria, texto) {
   const catOk = categoria === "todas" || producto.categoria === categoria;
@@ -16,11 +19,8 @@ function renderCatalogo() {
   const sinResultados = document.getElementById("sinResultados");
   if (!contenedor) return;
 
-  const buscador = document.getElementById("buscador");
-  const activeChip = document.querySelector(".chip-button.active");
-
-  const categoria = activeChip ? activeChip.dataset.categoria : "todas";
-  const texto = buscador ? buscador.value.trim() : "";
+  const categoria = categoriaActual || "todas";
+  const texto = textoBusqueda || "";
 
   contenedor.innerHTML = "";
 
@@ -79,21 +79,51 @@ document.addEventListener("DOMContentLoaded", () => {
   const buscador = document.getElementById("buscador");
   const categoriaChips = document.querySelectorAll(".chip-button");
 
+  function actualizarBuscadores() {
+    if (buscador) buscador.value = textoBusqueda;
+    const buscadorMobile = document.getElementById("buscadorMobile");
+    if (buscadorMobile) buscadorMobile.value = textoBusqueda;
+  }
+
+  function setCategoria(cat) {
+    categoriaActual = cat || "todas";
+    categoriaChips.forEach((btn) => {
+      if (btn.dataset.categoria === categoriaActual) {
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
+      }
+    });
+    renderCatalogo();
+  }
+
   if (categoriaChips.length > 0) {
     categoriaChips.forEach((btn) => {
       btn.addEventListener("click", () => {
-        categoriaChips.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-        renderCatalogo();
+        setCategoria(btn.dataset.categoria || "todas");
       });
     });
   }
 
   if (buscador) {
     buscador.addEventListener("input", () => {
+      textoBusqueda = buscador.value.trim();
+      actualizarBuscadores();
       renderCatalogo();
     });
   }
+
+  const buscadorMobile = document.getElementById("buscadorMobile");
+  if (buscadorMobile) {
+    buscadorMobile.addEventListener("input", () => {
+      textoBusqueda = buscadorMobile.value.trim();
+      actualizarBuscadores();
+      renderCatalogo();
+    });
+  }
+
+  // categoría inicial
+  setCategoria("todas");
 
   cargarCatalogo();
 
@@ -200,5 +230,69 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target.tagName === "IMG") {
       e.preventDefault();
     }
+  });
+
+  // === MENÚ MÓVIL ===
+  const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+  const mobileSearchToggle = document.querySelector(".mobile-search-toggle");
+  const mobileMenuPanel = document.getElementById("mobileMenuPanel");
+
+  function abrirMenuMobile() {
+    if (!mobileMenuPanel) return;
+    mobileMenuPanel.classList.add("open");
+    mobileMenuPanel.setAttribute("aria-hidden", "false");
+  }
+
+  function cerrarMenuMobile() {
+    if (!mobileMenuPanel) return;
+    mobileMenuPanel.classList.remove("open");
+    mobileMenuPanel.setAttribute("aria-hidden", "true");
+  }
+
+  if (mobileMenuToggle && mobileMenuPanel) {
+    mobileMenuToggle.addEventListener("click", () => {
+      if (mobileMenuPanel.classList.contains("open")) {
+        cerrarMenuMobile();
+      } else {
+        abrirMenuMobile();
+      }
+    });
+
+    mobileMenuPanel.addEventListener("click", (e) => {
+      if (e.target === mobileMenuPanel) {
+        cerrarMenuMobile();
+      }
+    });
+  }
+
+  if (mobileSearchToggle) {
+    mobileSearchToggle.addEventListener("click", () => {
+      abrirMenuMobile();
+      setTimeout(() => {
+        const input = document.getElementById("buscadorMobile");
+        if (input) input.focus();
+      }, 180);
+    });
+  }
+
+  const mobileNavButtons = document.querySelectorAll(".mobile-nav-btn");
+  mobileNavButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const target = btn.dataset.target;
+      if (target === "admin") {
+        window.location.href = "admin.html";
+        return;
+      }
+      if (target === "contacto") {
+        const contactoSection = document.getElementById("contacto");
+        if (contactoSection) {
+          cerrarMenuMobile();
+          contactoSection.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        cerrarMenuMobile();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    });
   });
 });
