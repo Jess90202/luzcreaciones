@@ -58,7 +58,7 @@ body {
   font-weight: 700;
   font-family: "Pacifico", cursive;
   letter-spacing: 0.03em;
-  background: linear-gradient(90deg, #ff7eb3, #b199da);
+  background: linear-gradient(135deg, #ff7ea3 0%, #7e88ff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -756,7 +756,7 @@ body {
   font-weight: 700;
   font-family: "Pacifico", cursive;
   letter-spacing: 0.03em;
-  background: linear-gradient(90deg, #ff7eb3, #b199da);
+  background: linear-gradient(135deg, #ff7ea3 0%, #7e88ff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
