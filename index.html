@@ -12,24 +12,6 @@
 </head>
 <body>
   <header class="site-header">
-    <!-- Barra móvil superior -->
-    <div class="mobile-header-bar">
-      <button class="mobile-menu-toggle" aria-label="Abrir menú">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <div class="mobile-header-brand">
-        <img src="logo.png" alt="Luz Creaciones" class="mobile-logo" />
-        <span class="mobile-header-title">Luz Creaciones</span>
-      </div>
-
-      <button class="mobile-search-toggle" aria-label="Buscar">
-        🔍
-      </button>
-    </div>
-
     <div class="header-inner">
       <div class="brand">
         <img src="logo.png" alt="Luz Creaciones" class="logo" />
@@ -47,7 +29,7 @@
     <div class="header-inner header-filters">
       <div class="filters">
         <!-- Categorías como botones -->
-        <div class="filters-aligned-block">
+        <div class="filters-aligned-block categorias-block">
           <span class="filter-label">Categoría</span>
           <div class="categoria-chips" id="categoriaChips">
             <button class="chip-button active" data-categoria="todas">Todas</button>
@@ -71,38 +53,6 @@
       </div>
     </div>
   </header>
-
-  <!-- Panel de menú móvil -->
-  <div class="mobile-menu-panel" id="mobileMenuPanel" aria-hidden="true">
-    <div class="mobile-menu-inner">
-      <div class="mobile-menu-search">
-        <div class="search-pill mobile-search-pill">
-          <span class="search-icon">🔍</span>
-          <input
-            type="search"
-            id="buscadorMobile"
-            placeholder="Buscar piezas únicas..."
-          />
-        </div>
-      </div>
-
-      <nav class="mobile-menu-nav">
-        <button class="mobile-nav-btn" data-target="inicio">Inicio</button>
-        <button class="mobile-nav-btn" data-target="contacto">Contacto</button>
-        <button class="mobile-nav-btn" data-target="admin">Admin</button>
-      </nav>
-
-      <div class="mobile-menu-categorias">
-        <p class="mobile-section-label">Categoría</p>
-        <div class="categoria-chips categoria-chips-mobile">
-          <button class="chip-button" data-categoria="todas">Todas</button>
-          <button class="chip-button" data-categoria="bisuteria">Bisutería</button>
-          <button class="chip-button" data-categoria="madera">Madera</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
 
   <main id="inicio" class="main-content">
     <section id="productos" class="grid-productos">
