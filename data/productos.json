@@ -7,6 +7,13 @@
       "descripcion": "Imagen de prueba",
       "categoria": "bisuteria",
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1763674766/Gemini_Generated_Image_l79642l79642l796_1_nmdihi.png"
+    },
+    {
+      "nombre": "Navidad",
+      "precio": 120,
+      "descripcion": "Pulcera de figuras endelica",
+      "categoria": "bisuteria",
+      "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1763846968/iytekspxqxhahf8egkp4.jpg"
     }
   ]
 }
