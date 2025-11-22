@@ -13,6 +13,13 @@
       "descripcion": "",
       "categoria": "bisuteria",
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1763847379/yta0ont9nqgmhthmquh3.jpg"
+    },
+    {
+      "nombre": "Angel",
+      "precio": 80,
+      "descripcion": "",
+      "categoria": "bisuteria",
+      "imagen": ""
     }
   ]
 }
