@@ -13,6 +13,13 @@
       "descripcion": "",
       "categoria": "bisuteria",
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1763847379/yta0ont9nqgmhthmquh3.jpg"
+    },
+    {
+      "nombre": "Aretes pino",
+      "precio": 150,
+      "descripcion": "",
+      "categoria": "bisuteria",
+      "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764638471/lmyo9c5hwotqvc4k0au0.jpg"
     }
   ]
 }
