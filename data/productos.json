@@ -1,13 +1,6 @@
 {
   "productos": [
     {
-      "nombre": "Navidad",
-      "precio": 120,
-      "descripcion": "Pulcera de figuras endelica",
-      "categoria": "bisuteria",
-      "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1763846968/iytekspxqxhahf8egkp4.jpg"
-    },
-    {
       "nombre": "Aretes pino",
       "precio": 150,
       "descripcion": "",
