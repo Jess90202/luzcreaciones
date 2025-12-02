@@ -20,6 +20,13 @@
       "descripcion": "",
       "categoria": "bisuteria",
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764638471/lmyo9c5hwotqvc4k0au0.jpg"
+    },
+    {
+      "nombre": "Collar de angel",
+      "precio": 120,
+      "descripcion": "",
+      "categoria": "bisuteria",
+      "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764652460/qus4qo4u9brra7e2mycb.jpg"
     }
   ]
 }
