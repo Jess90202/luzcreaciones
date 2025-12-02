@@ -20,6 +20,13 @@
       "descripcion": "",
       "categoria": "bisuteria",
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764653236/zso6pgpgtlzh5ffmpq7n.jpg"
+    },
+    {
+      "nombre": "Aretes esferas",
+      "precio": 100,
+      "descripcion": "",
+      "categoria": "bisuteria",
+      "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764653333/pmr2udexxoqt5aw5jauh.jpg"
     }
   ]
 }
