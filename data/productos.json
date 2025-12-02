@@ -48,6 +48,13 @@
       "descripcion": "",
       "categoria": "bisuteria",
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764653917/ahfp2kbglvd1l6mhyjhx.jpg"
+    },
+    {
+      "nombre": "Mini borrego",
+      "precio": 30,
+      "descripcion": "",
+      "categoria": "bisuteria",
+      "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764653989/yflpbsjfw9d1emihowzt.jpg"
     }
   ]
 }
