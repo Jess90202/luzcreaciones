@@ -55,6 +55,13 @@
       "descripcion": "",
       "categoria": "bisuteria",
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764653989/yflpbsjfw9d1emihowzt.jpg"
+    },
+    {
+      "nombre": "Pulsera de santa",
+      "precio": 120,
+      "descripcion": "",
+      "categoria": "bisuteria",
+      "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764654061/hlu8cauk4pbcpq5bcnac.jpg"
     }
   ]
 }
