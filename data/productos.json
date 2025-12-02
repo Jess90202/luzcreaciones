@@ -34,6 +34,13 @@
       "descripcion": "",
       "categoria": "bisuteria",
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764653411/scrnu8eza3hhj73xjtpw.jpg"
+    },
+    {
+      "nombre": "Aretes de muñeco de nieve",
+      "precio": 200,
+      "descripcion": "",
+      "categoria": "bisuteria",
+      "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764653866/izavzgjcgxunerwrvoiq.jpg"
     }
   ]
 }
