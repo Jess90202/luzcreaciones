@@ -41,6 +41,13 @@
       "descripcion": "",
       "categoria": "bisuteria",
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764653866/izavzgjcgxunerwrvoiq.jpg"
+    },
+    {
+      "nombre": "Aretes santa",
+      "precio": 200,
+      "descripcion": "",
+      "categoria": "bisuteria",
+      "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764653917/ahfp2kbglvd1l6mhyjhx.jpg"
     }
   ]
 }
