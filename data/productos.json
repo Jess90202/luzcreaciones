@@ -34,13 +34,6 @@
       "descripcion": "",
       "categoria": "bisuteria",
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764653411/scrnu8eza3hhj73xjtpw.jpg"
-    },
-    {
-      "nombre": "Kitty pulsera",
-      "precio": 150,
-      "descripcion": "Pulsera con elástico de 15 cm. a 18 cm.",
-      "categoria": "bisuteria",
-      "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764653559/erjfuynhihksu9ariu7s.jpg"
     }
   ]
 }
