@@ -22,7 +22,7 @@
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764653236/zso6pgpgtlzh5ffmpq7n.jpg"
     },
     {
-      "nombre": "Aretes de muÃÂÃÂ±eco de nieve",
+      "nombre": "Aretes de muÃÂÃÂÃÂÃÂ±eco de nieve",
       "precio": 200,
       "descripcion": "",
       "categoria": "bisuteria",
@@ -50,14 +50,14 @@
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764992562/cqs1e06j6oapfm2pajrd.jpg"
     },
     {
-      "nombre": "Aretes de bastÃ³n",
+      "nombre": "Aretes de bastÃÂ³n",
       "precio": 150,
       "descripcion": "",
       "categoria": "bisuteria",
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764992985/fax4hpsrqog87o5sodee.jpg"
     },
     {
-      "nombre": "corazón dorado",
+      "nombre": "corazÃ³n dorado",
       "precio": 40,
       "descripcion": "Pulsera ajustable",
       "categoria": "bisuteria",
@@ -76,6 +76,13 @@
       "descripcion": "colgante 33 x 37",
       "categoria": "madera",
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1769565865/od8modrgi8hkh21hqx92.jpg"
+    },
+    {
+      "nombre": "San Benito",
+      "precio": 40,
+      "descripcion": "pulsera ajustable",
+      "categoria": "bisuteria",
+      "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1769566020/oekjjvpmktck1vkpx7no.jpg"
     }
   ]
 }
