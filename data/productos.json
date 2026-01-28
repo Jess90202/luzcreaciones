@@ -22,7 +22,7 @@
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764653236/zso6pgpgtlzh5ffmpq7n.jpg"
     },
     {
-      "nombre": "Aretes de muÃÂÃÂÃÂÃÂ±eco de nieve",
+      "nombre": "Aretes de muÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±eco de nieve",
       "precio": 200,
       "descripcion": "",
       "categoria": "bisuteria",
@@ -50,14 +50,14 @@
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764992562/cqs1e06j6oapfm2pajrd.jpg"
     },
     {
-      "nombre": "Aretes de bastÃÂ³n",
+      "nombre": "Aretes de bastÃÂÃÂ³n",
       "precio": 150,
       "descripcion": "",
       "categoria": "bisuteria",
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764992985/fax4hpsrqog87o5sodee.jpg"
     },
     {
-      "nombre": "corazÃ³n dorado",
+      "nombre": "corazÃÂ³n dorado",
       "precio": 40,
       "descripcion": "Pulsera ajustable",
       "categoria": "bisuteria",
@@ -83,6 +83,13 @@
       "descripcion": "pulsera ajustable",
       "categoria": "bisuteria",
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1769566020/oekjjvpmktck1vkpx7no.jpg"
+    },
+    {
+      "nombre": "Angel",
+      "precio": 35,
+      "descripcion": "pulsera ajustable",
+      "categoria": "bisuteria",
+      "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1769566175/qjo2eciglfbn9j5ryaka.jpg"
     }
   ]
 }
