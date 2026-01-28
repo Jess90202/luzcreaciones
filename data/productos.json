@@ -22,7 +22,7 @@
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764653236/zso6pgpgtlzh5ffmpq7n.jpg"
     },
     {
-      "nombre": "Aretes de muÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±eco de nieve",
+      "nombre": "Aretes de muÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ±eco de nieve",
       "precio": 200,
       "descripcion": "",
       "categoria": "bisuteria",
@@ -50,14 +50,14 @@
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764992562/cqs1e06j6oapfm2pajrd.jpg"
     },
     {
-      "nombre": "Aretes de bastÃÂÃÂ³n",
+      "nombre": "Aretes de bastÃÂÃÂÃÂÃÂ³n",
       "precio": 150,
       "descripcion": "",
       "categoria": "bisuteria",
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1764992985/fax4hpsrqog87o5sodee.jpg"
     },
     {
-      "nombre": "corazÃÂ³n dorado",
+      "nombre": "corazÃÂÃÂ³n dorado",
       "precio": 40,
       "descripcion": "Pulsera ajustable",
       "categoria": "bisuteria",
@@ -97,6 +97,13 @@
       "descripcion": "pulsera ajustable tejida color a elegir rosa, rojo o negro precio cada una.",
       "categoria": "bisuteria",
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1769566465/ja8kqw4jv2wb0bqwh5vq.jpg"
+    },
+    {
+      "nombre": "plateado corazón",
+      "precio": 40,
+      "descripcion": "color a elegir precio de cada una",
+      "categoria": "bisuteria",
+      "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1769568253/o8o6p2u80smvjo18g1lq.jpg"
     }
   ]
 }
