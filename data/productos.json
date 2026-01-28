@@ -111,6 +111,13 @@
       "descripcion": "puede ser ajustable o con elástico, precio de cada una",
       "categoria": "bisuteria",
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1769568394/va2lsg4snzkjecweeofa.jpg"
+    },
+    {
+      "nombre": "Gaby",
+      "precio": 65,
+      "descripcion": "pulsera con elástico",
+      "categoria": "bisuteria",
+      "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1769568573/lzguzqsv2ttm4xympvjx.jpg"
     }
   ]
 }
