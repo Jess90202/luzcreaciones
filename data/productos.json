@@ -62,6 +62,13 @@
       "descripcion": "Pulsera ajustable",
       "categoria": "bisuteria",
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1769565381/rr76pq78r4coculh0fpi.jpg"
+    },
+    {
+      "nombre": "corazones",
+      "precio": 250,
+      "descripcion": "colgante 33 x 38 cm.",
+      "categoria": "madera",
+      "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1769565700/zboox3cwiuiaefvdhd8m.jpg"
     }
   ]
 }
