@@ -104,6 +104,13 @@
       "descripcion": "color a elegir precio de cada una",
       "categoria": "bisuteria",
       "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1769568253/o8o6p2u80smvjo18g1lq.jpg"
+    },
+    {
+      "nombre": "Dije cuadrado",
+      "precio": 50,
+      "descripcion": "puede ser ajustable o con elástico, precio de cada una",
+      "categoria": "bisuteria",
+      "imagen": "https://res.cloudinary.com/dexcfzwlm/image/upload/v1769568394/va2lsg4snzkjecweeofa.jpg"
     }
   ]
 }
